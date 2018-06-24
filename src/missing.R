@@ -26,3 +26,41 @@ impute.all <- function(data_in){
   return(data.mice)
 
 }
+
+
+
+impute.condition <- function(data_in){
+  
+  # Impute missing values
+  #(dim <- dim(data_in))
+  data_wo <- data_in
+  
+  # set NA in TBG with class "-" to be 24
+  data_in2 <- data_in
+  data_in2$TBG[is.na(data_in2$TBG) & (data_in2$class == "-")]  <- 24
+  
+  library(mice) 
+  mice <- mice(data_in2, m = 1)
+  data.mice<- complete(mice)
+  # write.table(as.matrix(data.mice),file="thyroid_complete.txt",sep="\t")
+  return(data.mice)
+  
+}
+
+impute.condition2 <- function(data_in){
+  
+  # Impute missing values
+  #(dim <- dim(data_in))
+  data_wo <- data_in
+  
+  # set NA in TBG with class "-" to be 24
+  data_in2 <- data_in
+  data_in2$TBG[is.na(data_in2$TBG) & (data_in2$class == "-")]  <- 22.9
+  
+  library(mice) 
+  mice <- mice(data_in2, m = 1)
+  data.mice<- complete(mice)
+  # write.table(as.matrix(data.mice),file="thyroid_complete.txt",sep="\t")
+  return(data.mice)
+  
+}
