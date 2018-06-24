@@ -27,40 +27,41 @@ data.mice <- remove.and.impute(data_in)
 # PCA for comparison
 library(FactoMineR)
 summary(data.mice)
-my.pca <- PCA(data.mice, quali.sup = c(2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,22,23))
+my.pca1 <- PCA(data.mice, quali.sup = c(2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,22,23))
 summary(data.mice$class)
-plot(my.pca$ind$coord[,1],my.pca$ind$coord[,2], col=as.numeric(data.mice$class))
+plot(my.pca1$ind$coord[,1],my.pca$ind$coord[,2], col=as.numeric(data.mice$class))
 
 # option 2) doing MICE-------
-data.mice <- impute.all(data_in)
+data.mice2 <- impute.all(data_in)
 # PCA for comparison
 library(FactoMineR)
-my.pca <- PCA(data.mice, quali.sup = c(2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,22,23,25))
-summary(data.mice$class)
-plot(my.pca$ind$coord[,1],my.pca$ind$coord[,2], col=as.numeric(data.mice$class))
+my.pca2 <- PCA(data.mice2, quali.sup = c(2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,22,23,25))
+summary(data.mice2$class)
+plot(my.pca2$ind$coord[,1],my.pca$ind$coord[,2], col=as.numeric(data.mice$class))
 
 # option 3) doin MICE for conditions, 24 for healty-----
-data.mice <- impute.condition(data_in)
+data.mice3 <- impute.condition(data_in)
 # PCA for comparison
 library(FactoMineR)
-my.pca <- PCA(data.mice, quali.sup = c(2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,22,23,25))
-summary(data.mice$class)
-plot(my.pca$ind$coord[,1],my.pca$ind$coord[,2], col=as.numeric(data.mice$class))
+my.pca3 <- PCA(data.mice3, quali.sup = c(2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,22,23,25))
+summary(data.mice3$class)
+plot(my.pca3$ind$coord[,1],my.pca$ind$coord[,2], col=as.numeric(data.mice$class))
 
-# option 3) doin MICE for conditions, 24 for healty-----
-data.mice <- impute.condition2(data_in)
+# option 4) doin MICE for conditions, 24 for healty-----
+data.mice4 <- impute.condition2(data_in)
 # PCA for comparison
 library(FactoMineR)
-my.pca <- PCA(data.mice, quali.sup = c(2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,22,23,25))
-summary(data.mice$class)
-plot(my.pca$ind$coord[,1],my.pca$ind$coord[,2], col=as.numeric(data.mice$class))
+my.pca4 <- PCA(data.mice4, quali.sup = c(2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,22,23,25))
+summary(data.mice4$class)
+plot(my.pca4$ind$coord[,1],my.pca$ind$coord[,2], col=as.numeric(data.mice$class))
 
 
 # errors -------------------------------------------------
-data.mice <- errors(data.mice)
+data.mice <- errors(data.mice2)
 
 # outliers ----------------------------------------------------------------
-data.mice <- ourliers(data.mice)
+outliers.data <- outliers(data.mice)
+
 
 
 

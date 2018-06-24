@@ -1,0 +1,95 @@
+MVA - thyroid0387
+==================
+
+We possibly want to combine PCA and MCA in our project. We were told to do the following:
+1- normalize/arrange the principal components from each analysis in order to have 100% variance explained in total
+2- combine them and select the sginificant components
+3- project categorical vars to PCA significant principal components and project continouous vars to MCA singificant principal components
+
+
+structure
+	ok- sharelatex
+	ok- bitbucket
+	ok- main.R with other files for each subtask
+
+
+preprocessing
+
+	decision over TBG imputation
+		ok-decide about TBG, T3 and others that have a lot of missing values
+		if TSH abnormal T3,
+		ok- causality or dependence between tests
+		ok- normal range 10-24 vs mean 29 vs people w. condition range 30 - ..200
+		ok->options
+			remove
+			mice on all
+			healty to mean of healty -> 22.9 + mice on others
+		ok-> we choose mice
+			we do PCA and see the difference in variance explained
+			TBG is well represented in the first fact. plane and 
+			TBG is highly correlated with second component
+			-> we decide to keep it
+				
+		-> conclude on mice
+			different options, their result, why we conclude about mice
+
+	error
+		->code 
+		->report
+
+	outliers
+		->code
+		->report
+
+	transf
+		- 7 classe only
+		- 2 classe only
+	feature selection?
+	feature extraction (target 20 classes to 7 classes)
+
+
+visualization
+	PCA?
+	rotation
+
+clustering
+	Hierarchical + Kmeans
+
+interpreation
+	profiling? -> catdes
+
+
+
+prediction model
+	separate test and training?
+	random forest
+	validation protocol OOB
+
+
+Report:
+
+1. A description of the problem and available data
+
+2. The pre-process of data
+
+
+3. The protocol of validation
+	-> about cv and oob for trees
+	-> macro F-measure for multiclass
+
+4. The visualisation performed
+	PCA + rotation	
+
+5. The interpretation of the latent concepts.
+	rotation
+
+
+6. The clustering performed
+7. The interpretation of the found clusters.
+8. Discussion about the differences of the test sample respect to the
+training one.
+
+9. The prediction model with its best parameterization and its
+generalization error
+
+10.Scientific and personal conclusions
