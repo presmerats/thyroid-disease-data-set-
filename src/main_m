@@ -86,7 +86,7 @@ colnames(data.select) <- colnames
 
 
 # PCA -------------------------------------------------------------------------
-pca <- pca.func(data.select)
+pca <- pca.func(data.select,weights)
 pca.rt <- pca.rotation(pca, data.select)
 varimax(pca$var$cor[,1:7])$loadings
 
