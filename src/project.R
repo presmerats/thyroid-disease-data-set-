@@ -12,6 +12,7 @@ source("missing.R")
 source("errors.R")
 source("outliers.R")
 source("PCA.R")
+source("PCA_rotation.R")
 source("MCA.R")
 
 data <- read.table("../dataset/thyroid0387.txt", header = FALSE, sep = ",")

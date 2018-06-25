@@ -1,11 +1,20 @@
 
 
+
 outliers <- function(data.mice){
   library(chemometrics)
-  data2 <- data.mice[,-c(2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,22,23,25)]
+  dim <- dim(data.mice)
+  data2 <- data.mice[,-c(2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,22,24)]
+  weights <- matrix(nrow=dim[1],ncol=1)
   data2 <- Moutlier(data2, quantile=0.975)
-  data.result <- data.mice[data2[["rd"]]<=data2[["cutoff"]], ]
-  data.result <- data.mice[data2[["rd"]]<=250, ]
+  #data.result <- data.mice[data2[["rd"]]<=data2[["cutoff"]], ]
+  #data.result <- data.mice[data2[["rd"]]<=250, ]
+  outliers_index <- which(data2[["rd"]]>250)
+  outliers <- data.mice[outliers_index, ]
+  non_outliers <- data.mice[-outliers_index,]
+  weights[outliers_index] <- 1/dim[1]
+  weights[-outliers_index] <- 1
   
-  return(data.result)
+  return(list(outliers, weights))
+  
 }
