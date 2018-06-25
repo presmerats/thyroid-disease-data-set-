@@ -1,0 +1,26 @@
+pca.rotation <- function(pca,data.select){
+  
+  Phi <- pca$var$coord
+  pc.rot <- varimax(Phi)
+  Psi <- pca$ind$coord
+  iden <- rownames(data.select)
+  etiq <- names(data.select)
+  
+  Phi.rot <- pc.rot$loadings[1:7,]
+  
+  # Plot the rotated variables
+  library(calibrate)
+  
+  Dim1 <- paste(my.pca$eig$`percentage of variance`[1],"%",sep="")
+  Dim1_X <- paste("Dim1", "(",Dim1,")")
+  Dim2 <- paste(my.pca$eig$`percentage of variance`[2],"%",sep="")
+  Dim2_Y <- paste("Dim2", "(",Dim2,")")
+  
+  ze <- rep(0,7)
+  plot(Phi.rot,xlim=c(-1,1),ylim=c(-1,1),xlab = Dim1_X, ylab = Dim2_Y)
+  text(Phi.rot,labels=etiq, col="blue")
+  arrows(ze,ze,Phi.rot[,1],Phi.rot[,2],length=0.07,col="blue")
+  abline(h=0,v=0,col="gray")
+  circle(1)
+  }
+
