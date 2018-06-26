@@ -22,14 +22,14 @@ data_in <- preprocessing(data)
 
 # MIssing values------------------------------------------------------------------------------------------
 
-# option 1) removing TBG-----------
-data.mice <- remove.and.impute(data_in)
-# PCA for comparison
-library(FactoMineR)
-summary(data.mice)
-my.pca1 <- PCA(data.mice, quali.sup = c(2,22,23))
-summary(data.mice$class)
-plot(my.pca1$ind$coord[,1],my.pca1$ind$coord[,2], col=as.numeric(data.mice$class))
+# # option 1) removing TBG-----------
+# data.mice <- remove.and.impute(data_in)
+# # PCA for comparison
+# library(FactoMineR)
+# summary(data.mice)
+# my.pca1 <- PCA(data.mice, quali.sup = c(2,22,23))
+# summary(data.mice$class)
+# plot(my.pca1$ind$coord[,1],my.pca1$ind$coord[,2], col=as.numeric(data.mice$class))
 
 # option 2) doing MICE-------
 data.mice2 <- impute.all(data_in)
@@ -39,29 +39,34 @@ my.pca2 <- PCA(data.mice2, quali.sup = c(2,22,24))
 summary(data.mice2$class)
 plot(my.pca2$ind$coord[,1],my.pca2$ind$coord[,2], col=as.numeric(data.mice2$class))
 
-# option 3) doing MICE for conditions, 24 for healthy-----
-data.mice3 <- impute.condition(data_in)
-# PCA for comparison
-library(FactoMineR)
-my.pca3 <- PCA(data.mice3, quali.sup = c(2,22,24))
-summary(data.mice3$class)
-plot(my.pca3$ind$coord[,1],my.pca3$ind$coord[,2], col=as.numeric(data.mice$class))
+# # option 3) doing MICE for conditions, 24 for healthy-----
+# data.mice3 <- impute.condition(data_in)
+# # PCA for comparison
+# library(FactoMineR)
+# my.pca3 <- PCA(data.mice3, quali.sup = c(2,22,24))
+# summary(data.mice3$class)
+# plot(my.pca3$ind$coord[,1],my.pca3$ind$coord[,2], col=as.numeric(data.mice$class))
+# 
+# # option 4) doing MICE for conditions, 24 for healthy-----
+# data.mice4 <- impute.condition2(data_in)
+# # PCA for comparison
+# library(FactoMineR)
+# my.pca4 <- PCA(data.mice4, quali.sup = c(2,22,24))
+# summary(data.mice4$class)
+# plot(my.pca4$ind$coord[,1],my.pca$ind$coord[,2], col=as.numeric(data.mice$class))
 
-# option 4) doing MICE for conditions, 24 for healthy-----
-data.mice4 <- impute.condition2(data_in)
-# PCA for comparison
-library(FactoMineR)
-my.pca4 <- PCA(data.mice4, quali.sup = c(2,22,24))
-summary(data.mice4$class)
-plot(my.pca4$ind$coord[,1],my.pca$ind$coord[,2], col=as.numeric(data.mice$class))
 
+# now binarize sex after completing missing data-----------------
+data.mice <- sex.binarization(data.mice2)
 
 # errors -------------------------------------------------
-data.mice <- errors(data.mice2)
+data.mice <- errors(data.mice)
 
 # outliers ----------------------------------------------------------------
 outliers.data <- outliers(data.mice)[[1]]
 weights <- outliers(data.mice)[[2]]
+
+
 
 
 

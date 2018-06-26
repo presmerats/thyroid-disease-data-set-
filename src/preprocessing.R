@@ -72,6 +72,11 @@ preprocessing <- function(data){
 }
 
 
+sex.binarization <- function(data_in){
+  data_in$sex <- as.numeric(data_in$sex)-1
+  return(data_in)
+}
+
 preprocessing_old <- function(data){
   
   data_without_id <- data
