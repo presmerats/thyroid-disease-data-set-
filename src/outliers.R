@@ -12,7 +12,7 @@ outliers <- function(data.mice){
   outliers_index <- which(data2[["rd"]]>250)
   outliers <- data.mice[outliers_index, ]
   non_outliers <- data.mice[-outliers_index,]
-  weights[outliers_index] <- 1/dim[1]
+  weights[outliers_index] <- 0
   weights[-outliers_index] <- 1
   
   return(list(outliers, weights))
