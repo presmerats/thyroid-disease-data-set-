@@ -17,4 +17,6 @@ outliers <- function(data.mice){
   
   return(list(outliers, weights))
   
+ 
+  
 }

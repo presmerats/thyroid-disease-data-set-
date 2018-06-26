@@ -26,11 +26,8 @@ preprocessing
 	ok-missing values -> mice
 	ok-outliers
 
-
-	ok-feature selection
-->	- verify the contribution with PCA?
 	
-->	feature extraction (target 20 classes to 7 classes)
+	ok-	feature extraction (target 20 classes to 7 classes)
 		- 7 classe only
 		- 4 classes Hyper, Hypo, other, normal
 		- 2 classe only
@@ -46,6 +43,8 @@ preprocessing
 				+ comparison with RF feature selection
 ->			rotation
 
+
+
 ->		clustering
 			Hierarchical + Kmeans
 
@@ -54,10 +53,19 @@ preprocessing
 
 
 
+	ok-feature selection
+->	- verify the contribution with PCA?
+
+
+
 		prediction model
-			separate test and training?
+			ok-separate test and training?
+			decision trees
+				CART intended for balanced classes in the training data
 			random forest
 			validation protocol OOB
+			harmonic measure
+			compare dec. vs rf
 
 
 Report:

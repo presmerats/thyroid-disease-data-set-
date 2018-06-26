@@ -64,6 +64,7 @@ outliers.data <- outliers(data.mice)[[1]]
 weights <- outliers(data.mice)[[2]]
 
 
+
 # Target variables preparation ----------------------------------------
 # Transform into 7 classes, 4 classes and 2 classes problem
 source("preprocessing.R")
@@ -74,6 +75,27 @@ summary(data.4.classes$class)
 data.2.classes <- target.extraction(data.select,selection=2)
 summary(data.2.classes$class)
 summary(data.select$class)
+
+
+# PCA -------------------------------------------------------------------------
+
+pca <- pca.func(data.select,weights)
+source("PCA_rotation.R")
+par(mfrow=c(1,1))
+pca.rt <- pca.rotation(pca, data.select)
+varimax(pca$var$cor[,1:7])$loadings
+
+
+
+# Hierarchical Clustering ---------------------------------------------
+
+
+
+
+# interpretation
+
+
+
 
 
 # Feature Selection ----------------------------------------------------------------------------------
@@ -97,22 +119,11 @@ colnames <- c(colnames(data.select), "class")
 data.select <- cbind(data.select,data.mice$class)
 colnames(data.select) <- colnames
 
-
-# PCA -------------------------------------------------------------------------
-
-pca <- pca.func(data.select,weights)
-source("PCA_rotation.R")
-par(mfrow=c(1,1))
-pca.rt <- pca.rotation(pca, data.select)
-varimax(pca$var$cor[,1:7])$loadings
+# Removing outliers ------------------------------
+data.select <-  data.select[weigths == 0,]
 
 
-
-
-
-# interpretation
-
-# Classification
+# Classification --------------------------------------------------
 # firt grouping 
 grouping <- function(doc) {
   doc <- gsub("A","hyperthyroid", doc)
@@ -140,6 +151,9 @@ grouping <- function(doc) {
 
 data.mice$class <- as.factor(sapply(data.mice$class,grouping))
 
+data.mice <- data.4.classes
+summary(data.mice)
+
 # split into training data set and test data set
 set.seed(19)
 N <- nrow(data.mice)
@@ -149,7 +163,7 @@ n <- as.integer(summary(data.mice[learn,]$class))
 # apply Random Forest
 library(randomForest)
 set.seed(1234)
-my.rf <- randomForest(class ~ ., data=data.mice[learn,], sampsize=c(660,n[2:8]), importance=TRUE, xtest=data.mice[-learn,-23], ytest=data.mice[-learn,23],ntree=200, proximity=FALSE,maxnodes = 8)
+my.rf <- randomForest(class ~ ., data=data.mice[learn,], ntree=200, proximity=FALSE)
 print(my.rf)
 # the number of normal cases are overwhelming, therefore, we need to balance the data. 
 
