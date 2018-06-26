@@ -9,50 +9,62 @@ We possibly want to combine PCA and MCA in our project. We were told to do the f
 
 preprocessing
 
-	decision over TBG imputation
+	ok-decision over TBG imputation
 		-decide about TBG, T3 and others that have a lot of missing values
 		if TSH abnormal T3,
 
-	transf
+
+	ok- sharelatex
+	ok- bitbucket
+	ok- main.R with other files for each subtask
+
+	ok- categorical and continuous
+			-> all continuous
+
+	ok-summary
+	ok-errors
+	ok-missing values -> mice
+	ok-outliers
+
+
+	ok-feature selection
+->	- verify the contribution with PCA?
+	
+->	feature extraction (target 20 classes to 7 classes)
 		- 7 classe only
+		- 4 classes Hyper, Hypo, other, normal
 		- 2 classe only
 
 
-	- sharelatex
-	- bitbucket
-	- main.R with other files for each subtask
-
-	categorical and continuous
-
-	summary
-	errors
-	missing values -> mice
-	outliers
 
 
 
-	feature selection?
-	feature extraction (target 20 classes to 7 classes)
+		visualization
+			PCA?
+				with all vars
+				+ feature selection
+				+ comparison with RF feature selection
+->			rotation
 
-visualization
-	PCA?
-	rotation
+->		clustering
+			Hierarchical + Kmeans
 
-clustering
-	Hierarchical + Kmeans
-
-interpreation
-	profiling? -> catdes
+		interpreation
+			profiling? -> catdes
 
 
 
-prediction model
-	separate test and training?
-	random forest
-	validation protocol OOB
+		prediction model
+			separate test and training?
+			random forest
+			validation protocol OOB
 
 
 Report:
+
+obs:
+	we expect rf to be better if a lot of vars are explinatory
+	CART to be better if only a small subset of vars are explanatory
 
 1. A description of the problem and available data
 

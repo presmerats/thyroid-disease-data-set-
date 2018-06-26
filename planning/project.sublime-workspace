@@ -1,0 +1,728 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"MPI_",
+				"MPI_DOUBLE"
+			],
+			[
+				"nump",
+				"numprocs-1"
+			],
+			[
+				"FeatureEx",
+				"FeatureExtractionDDI\tclass"
+			],
+			[
+				"prepare",
+				"prepareFeatures\tfunction"
+			],
+			[
+				"chunk",
+				"chunkGroup"
+			],
+			[
+				"e1w",
+				"e1word\tstatement"
+			],
+			[
+				"e2o",
+				"e2offset_original\tstatement"
+			],
+			[
+				"e1off",
+				"e1offset_original\tstatement"
+			],
+			[
+				"entity",
+				"entity1_features_template\tstatement"
+			],
+			[
+				"shortest",
+				"shortestpathDep"
+			],
+			[
+				"process",
+				"processSentences\tfunction"
+			],
+			[
+				"shor",
+				"shortestpathDep"
+			],
+			[
+				"sho",
+				"shortestpathDep"
+			],
+			[
+				"proces",
+				"ProcessSentences\tfunction"
+			],
+			[
+				"offset",
+				"offsetstart"
+			],
+			[
+				"re",
+				"registerError\tfunction"
+			],
+			[
+				"test",
+				"testdata"
+			],
+			[
+				"wei",
+				"weightsVector\tfunction"
+			],
+			[
+				"window_1_",
+				"window_1_before\tstatement"
+			],
+			[
+				"result",
+				"resultFeatures\tstatement"
+			],
+			[
+				"coutn",
+				"countWindow\tfunction"
+			],
+			[
+				"algo",
+				"algo\tstatement"
+			],
+			[
+				"par",
+				"parseEvaluationLine"
+			],
+			[
+				"trainin",
+				"training_set_name\tstatement"
+			],
+			[
+				"Key",
+				"KeyboardKey\tmodule"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "MVA - thyroid0387-planning",
+			"settings":
+			{
+				"buffer_size": 1863,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/pau/Projectes/mvaproject/dataset/thyroid0387.names",
+			"settings":
+			{
+				"buffer_size": 2567,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "Theme",
+		"selected_items":
+		[
+			[
+				"Theme",
+				"UI: Select Color Scheme"
+			],
+			[
+				"boxy",
+				"Boxy Theme: Configuration"
+			],
+			[
+				"json",
+				"JSON Reindent: reindent file or selection"
+			],
+			[
+				"set syntax:json",
+				"Set Syntax: JSON"
+			],
+			[
+				"preview",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"mark",
+				"Markdown Preview: Preview in Browser"
+			]
+		],
+		"width": 497.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/pau/Projectes/parallelism/delivery/Assignment/part4/submit-extrae.sh",
+		"/home/pau/Projectes/parallelism/delivery/Assignment/part3/heat-mpi.c",
+		"/home/pau/Projectes/parallelism/delivery/Assignment/part3/test.dat",
+		"/home/pau/Projectes/parallelism/delivery/Assignment/part2/solver-omp.c",
+		"/home/pau/Projectes/parallelism/delivery/Assignment/part2/heat-omp.c",
+		"/home/pau/gdrive/MIRI-DS/planning/tasques-20180222",
+		"/home/pau/Projectes/parallelism/planning/Parallelism tasks",
+		"/home/pau/Projectes/parallelism/scripts/mpi_part8.sh",
+		"/home/pau/gdrive/MIRI-DS/CPDS/Parallelism/MPI-intro",
+		"/home/pau/gdrive/MIRI-DS/CPDS/Parallelism/CUDA reduction",
+		"/home/pau/gdrive/MIRI-DS/CPDS/Parallelism/CUDA_intro",
+		"/home/pau/gdrive/MIRI-DS/CPDS/Parallelism/memoryze",
+		"/home/pau/gdrive/MIRI-DS/CPDS/Parallelism/summary",
+		"/home/pau/Projectes/parallelism/Assignment/part2/solver-omp.c.gauss_for_wrong",
+		"/home/pau/Projectes/parallelism/Assignment/part2/solver-omp.c.gauss_for_good",
+		"/home/pau/Projectes/parallelism/Assignment/part2/solver-omp.c.omp_jacobi_sol",
+		"/home/pau/Projectes/parallelism/Assignment/part2/heat-omp.c",
+		"/home/pau/Projectes/parallelism/Assignment/part2/solver-omp.c.original",
+		"/home/pau/Projectes/parallelism/Assignment/part3/heat-mpi.c.original",
+		"/home/pau/Projectes/parallelism/Assignment/part3/heat-mpi.c.ab.1",
+		"/home/pau/Projectes/parallelism/Assignment/part3/submit-mpi.sh",
+		"/home/pau/Projectes/parallelism/scripts/mpi_part7.sh",
+		"/home/pau/Projectes/parallelism/Assignment/part3/heat-mpi.c.jacobi_part7",
+		"/home/pau/Projectes/parallelism/Assignment/part3/heat-mpi.c.jacobi_part5",
+		"/home/pau/Projectes/parallelism/scripts/mpi_part5.sh",
+		"/home/pau/Projectes/parallelism/Assignment/part3/heat-mpi.c.jacobi_part4",
+		"/home/pau/Projectes/parallelism/Assignment/part3/heat-mpi.c.jacobi_part2_good",
+		"/home/pau/Projectes/parallelism/scripts/mpi_part4.sh",
+		"/home/pau/gdrive/MIRI-DS/CPDS/Parallelism/lab/execution",
+		"/home/pau/gdrive/MIRI-DS/CPDS/Parallelism/OpenMP task parallelism",
+		"/home/pau/gdrive/MIRI-DS/CPDS/Parallelism/OpenMP - loops",
+		"/home/pau/gdrive/MIRI-DS/CPDS/Parallelism/Parallelism-02-OpenMP-notes",
+		"/home/pau/gdrive/MIRI-DS/CPDS/Parallelism/Parallelism 20180508",
+		"/home/pau/gdrive/MIRI-DS/CPDS/Parallelism/Parallelism - intro",
+		"/home/pau/Projectes/parallelism/scripts/mpi_part2_good.sh",
+		"/home/pau/Projectes/parallelism/Assignment/part3/test_jacobi_movesource.dat",
+		"/home/pau/Projectes/parallelism/Assignment/part3/heat-mpi.c",
+		"/home/pau/Projectes/parallelism/Assignment/part3/test_jacobi.dat",
+		"/home/pau/Projectes/parallelism/Assignment/part3/solver-mpi.c.jacobi_part2",
+		"/home/pau/Projectes/parallelism/Assignment/part3/heat.h",
+		"/home/pau/Projectes/parallelism/Assignment/part3/heat.h.jacobi_part2",
+		"/home/pau/Projectes/parallelism/Assignment/part3/heat-mpi.c.jacobi_part2",
+		"/home/pau/Projectes/parallelism/scripts/mpi_part2.sh",
+		"/home/pau/Projectes/parallelism/Assignment/part3/misc.c",
+		"/home/pau/Projectes/parallelism/Assignment/part1/misc.c",
+		"/home/pau/Projectes/parallelism/Assignment/part1/heat.c",
+		"/home/pau/Projectes/parallelism/Assignment/part2/solver-omp.c",
+		"/home/pau/Projectes/parallelism/scripts/template_openmp.sh",
+		"/home/pau/Projectes/parallelism/scripts/omp_jacobi.sh",
+		"/home/pau/Projectes/parallelism/scripts/omp_gauss.sh",
+		"/home/pau/Projectes/parallelism/scripts/mpi_template.sh",
+		"/home/pau/Projectes/parallelism/Assignment/part3/solver-mpi.c.task",
+		"/home/pau/Projectes/parallelism/scripts/environment",
+		"/home/pau/Projectes/parallelism/scripts/tomas/template.sh",
+		"/home/pau/Projectes/parallelism/scripts/tomas/check_flags.sh",
+		"/home/pau/Projectes/parallelism/scripts/template.sh",
+		"/home/pau/Projectes/parallelism/untitled.sh",
+		"/home/pau/Projectes/parallelism/test.sh",
+		"/home/pau/gdrive/MIRI-DS/CPDS/Parallelism/OpenMP single constructS",
+		"/home/pau/gdrive/MIRI-DS/MVA/exercices/ex08/tic_tt.csv",
+		"/home/pau/gdrive/MIRI-DS/MVA/MVA_MBA Market basket analysis",
+		"/home/pau/gdrive/MIRI-DS/MVA/MVA summary",
+		"/home/pau/gdrive/MIRI-DS/MVA/PCA-class.R",
+		"/home/pau/gdrive/MIRI-DS/MVA/exercices/credsco.R",
+		"/home/pau/gdrive/MIRI-DS/MVA/practiceC5212B",
+		"/home/pau/gdrive/MIRI-DS/MVA/MVA multivariate normal distribution",
+		"/home/pau/gdrive/MIRI-DS/planning/Summer 2018",
+		"/home/pau/gdrive/MIRI-DS/MVA/MVA presentation notes",
+		"/home/pau/gdrive/g/trainingi",
+		"/home/pau/gdrive/MIRI-DS/ML/notes/ML-11-12-NN-notes",
+		"/home/pau/gdrive/MIRI-DS/MVA/MVA PCA 1",
+		"/home/pau/gdrive/MIRI-DS/MVA/MVA PCA 2.index",
+		"/home/pau/gdrive/MIRI-DS/MVA/MVA_PCA2.R",
+		"/home/pau/gdrive/MIRI-DS/MVA/MVA_PCA2_interpretation of biplots",
+		"/home/pau/gdrive/MIRI-DS/MVA/Clustering",
+		"/home/pau/gdrive/MIRI-DS/MVA/MVA_Clustering.notes",
+		"/home/pau/gdrive/MIRI-DS/AHLT-MAI/AHLT summary",
+		"/home/pau/gdrive/MIRI-DS/AHLT-MAI/AHLT -Session 5",
+		"/home/pau/gdrive/MIRI-DS/AHLT-MAI/AHLT - Session4 - Parsing - Robust parsing Chunking",
+		"/home/pau/gdrive/MIRI-DS/AHLT-MAI/AHLTMAI - session 3",
+		"/home/pau/gdrive/MIRI-DS/AHLT-MAI/AHLT sess 2",
+		"/home/pau/gdrive/MIRI-DS/AHLT-MAI/AHLT sess1",
+		"/home/pau/gdrive/MIRI-DS/AHLT-MAI/Project/Dataset-description",
+		"/home/pau/gdrive/MIRI-DS/AHLT-MAI/Project/classnotes",
+		"/home/pau/gdrive/MIRI-DS/OD/11_-_descriptionlogs-ontology",
+		"/home/pau/gdrive/MIRI-DS/OD/12_-_TRiple store",
+		"/home/pau/gdrive/MIRI-DS/OD/11_-_notes2-exercice11",
+		"/home/pau/gdrive/MIRI-DS/OD/09_-_Knowledge graphs",
+		"/home/pau/gdrive/MIRI-DS/OD/lab/lab3/od-lab3-personaltries",
+		"/home/pau/gdrive/MIRI-DS/OD/OD _session_20180323",
+		"/home/pau/Projectes/AHLT-mai/src/FeatureExtraction.py",
+		"/home/pau/Projectes/AHLT-mai/src/FreelingFeatures.py",
+		"/home/pau/Projectes/AHLT-mai/data/batches/dnr22/d30tDBmNERaCRFw1m10.yaml",
+		"/home/pau/Projectes/AHLT-mai/data/batches/dnr22/d30tMDmNERaCRFw1m10.yaml",
+		"/home/pau/Projectes/AHLT-mai/data/batches/dnr22/d23tDBmBERaLSVMw3m0.yaml",
+		"/home/pau/Projectes/AHLT-mai/data/batches/dnr22/d23tMDmBERaLSVMw3m0.yaml",
+		"/home/pau/Projectes/AHLT-mai/data/batches/svmdebug/d23tDBmNERaSVMw3.yaml",
+		"/home/pau/Projectes/AHLT-mai/data/batches/b0524/d24tMDmNERaCRFw1.yaml",
+		"/home/pau/Projectes/AHLT-mai/data/reports/_NER_scores.tex",
+		"/home/pau/Projectes/AHLT-mai/data/reports/_NER_scores2.tex",
+		"/home/pau/Projectes/AHLT-mai/data/reports/_DDI_scores2.tex",
+		"/home/pau/Projectes/AHLT-mai/src/templates/score2.j2",
+		"/home/pau/Projectes/AHLT-mai/data/reports/_DDI_scores.tex",
+		"/home/pau/Projectes/AHLT-mai/src/BIOFeatures.py",
+		"/home/pau/Projectes/AHLT-mai/data/features/features.json",
+		"/home/pau/Projectes/AHLT-mai/data/features/dataall.json",
+		"/home/pau/Projectes/AHLT-mai/data/LaboCase/Test/Test for DrugNER task/DrugBank/Misoprostol.xml",
+		"/home/pau/Projectes/AHLT-mai/planning/AHLT project tasks2",
+		"/home/pau/Projectes/AHLT-mai/planning/DDI_notes",
+		"/home/pau/Projectes/AHLT-mai/src/07-DDI_preprocess_DrugBank.py",
+		"/home/pau/Projectes/AHLT-mai/src/07-DDI_preprocess_Medline.py",
+		"/home/pau/Projectes/AHLT-mai/src/07-DDI_preprocess_total.py",
+		"/home/pau/Projectes/AHLT-mai/src/07-DDI_inspectfeatures.py",
+		"/home/pau/Projectes/AHLT-mai/src/Reporting.py",
+		"/home/pau/Projectes/AHLT-mai/src/templates/scores.j2",
+		"/home/pau/Projectes/AHLT-mai/src/CustomFeatures.py",
+		"/home/pau/Projectes/AHLT-mai/data/batches/ddi22/preprocessBDDIstep3Medline-test.yaml",
+		"/home/pau/Projectes/AHLT-mai/data/batches/ddi22/preprocessBDDIstep3Medline.yaml",
+		"/home/pau/Projectes/AHLT-mai/data/batches/ddi22/preprocessDDIstep3Medline-test.yaml",
+		"/home/pau/Projectes/AHLT-mai/data/batches/ddi22/preprocessDDIstep3Medline.yaml",
+		"/home/pau/Projectes/AHLT-mai/data/batches/ddi22/preprocessBDDIstep3DrugBank.yaml",
+		"/home/pau/Projectes/AHLT-mai/data/batches/ddi22/preprocessBDDIstep3DrugBank-test.yaml",
+		"/home/pau/Projectes/AHLT-mai/data/batches/ddi22/preprocessDDIstep3DrugBank.yaml",
+		"/home/pau/Projectes/AHLT-mai/data/batches/ddi22/preprocessDDIstep3DrugBank-test.yaml",
+		"/home/pau/Projectes/AHLT-mai/data/batches/ddi22/ddi006.yaml",
+		"/home/pau/Projectes/AHLT-mai/src/templates/scores3.j2",
+		"/home/pau/Projectes/AHLT-mai/src/NERmodel.py",
+		"/home/pau/Projectes/AHLT-mai/src/06-CRFplayground.py"
+	],
+	"find":
+	{
+		"height": 26.0
+	},
+	"find_in_files":
+	{
+		"height": 130.0,
+		"where_history":
+		[
+			"../batches/",
+			"../batches/*.yaml",
+			".",
+			"../data/batches"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"cpu_residual",
+			"Grid_Dim",
+			"numprocs >",
+			"numprocs",
+			"npx",
+			"nrows",
+			"localresidual",
+			"residual",
+			"nrows",
+			"param.maxi",
+			"break",
+			"lop =",
+			"np",
+			"maxiter",
+			"printf(\"re",
+			"heatomp",
+			"575",
+			"omp",
+			"param",
+			"param.u",
+			"rows",
+			"rank",
+			"columns",
+			"resolution",
+			"heatomp",
+			"HOST1",
+			"HOST2",
+			"\t\n",
+			"pseudo",
+			"Condition",
+			"condition",
+			"centroi",
+			"line",
+			"activa",
+			"regularization",
+			"distance",
+			"product",
+			",\n",
+			"linear",
+			"link",
+			"Regulari",
+			"regulari",
+			"asu",
+			"www",
+			"http://www.sersc.org",
+			"www",
+			"cvtra",
+			"cv",
+			"no C",
+			"self.scores",
+			"macro: {F1",
+			"limitTraining: 1000",
+			"featuresLists",
+			"window",
+			"www",
+			"extractFeatures",
+			"crf",
+			"trainTestModel",
+			"newModelPipeline",
+			"verifyOffsets",
+			"self.verification",
+			"verification",
+			"newModelPipeline",
+			"pipeline",
+			"done",
+			"pprint",
+			"^ mmm",
+			"^  m",
+			"pprint",
+			"prepareDDIFeatures",
+			"prepareFeatures",
+			"prepareSentenceFeatures",
+			"prepareEntityWordFeatures",
+			"prepareSentenceFeatures",
+			"sefe_",
+			"finalizeFeatures",
+			"featureExtractionDDIstep2",
+			"filterEntityWordFeatures",
+			"filterWordFeatures",
+			"FILTER",
+			"wordFeaturesExtension",
+			"modeltype",
+			"parallelBatch",
+			"trainTestModel",
+			"print(\"p",
+			"print(\"parseSing",
+			"parsePredictionOutput",
+			"prasePrediction",
+			"loadDDIFeatures",
+			"window",
+			"Exception:",
+			"prepareDDIFeatures",
+			"prepareFe",
+			"exception",
+			"finalize",
+			"predict",
+			"topcount=topcount",
+			"loadDDIFeatures",
+			"loadDDIFeaturesFile",
+			"finalizeFeatures",
+			"prepareDDIFeatures",
+			"loadDDIFeaturesFile",
+			"trainFeatures",
+			"trainingFolder",
+			"testBDDIfile",
+			"parallelDDIbatchTraining",
+			"total_time",
+			"modeltype: DDI",
+			"total_time",
+			"0,42",
+			"0.42",
+			"limittraining: 1000",
+			"^  m",
+			"  m",
+			"status: done",
+			"     wordfeatures:",
+			": DDI",
+			"BDDI",
+			"]]",
+			"wordStructure2,\n      wordStructureLong,\n      wordStructureLong2",
+			"save",
+			"maxwordlength",
+			"files_path",
+			"prepareFeatures",
+			"trainFeatureExtraction",
+			"predictionResults",
+			"Myfeatures",
+			"myFeatures"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"rows",
+			"heatmpi",
+			"myid",
+			"HOST",
+			"limitTraining: null",
+			"  mmm",
+			"^ mmm",
+			"modeltype: BDDI",
+			"limitTraining: null",
+			"  mm",
+			"status: pending",
+			": BDDI",
+			"DDI",
+			"]",
+			"",
+			"+str(word2)+",
+			"+str(word1)+",
+			"''.join(tree)",
+			"",
+			"    ",
+			"DDImodel",
+			"",
+			"modeltype: ER",
+			"gc.collect()\\ntime.sleep(60)",
+			"algorithm: svm",
+			"modeltype: NER",
+			"modeltype: ER",
+			"algorithm: svm",
+			"modeltype: ER",
+			"wordStruc",
+			"resultsold:\\n",
+			"\", params,",
+			"\",",
+			"\"",
+			"",
+			"fcurrent:",
+			"fcurrent",
+			"    fbefore",
+			"    fafter",
+			"    fbefore",
+			"    fafter",
+			"wafter",
+			"fafter",
+			"fbefore",
+			"fafter",
+			"\":+",
+			"\":-",
+			":-",
+			"  mod\\1:\\n    algorithm: crf\\n",
+			"  mod\\$1:\\n    algorithm: crf\\n",
+			"m0",
+			"",
+			"status: pending",
+			"\",",
+			"\"",
+			"resultstring[",
+			"self.",
+			"    word",
+			"    ",
+			"jobconf[",
+			"status: done",
+			"status: pending",
+			"    word",
+			"modeltype: NER",
+			"pos,",
+			"lemma, pos,",
+			"lemma,",
+			"pos, lookup, chunk",
+			"pos, lookup, chunkGroup",
+			"chunk",
+			"  mod",
+			"",
+			"chunkGroup",
+			"pos,isLo",
+			"lemma,",
+			"pos",
+			"lemma",
+			"pos",
+			"lemma",
+			"",
+			"    ",
+			"feature[\"pos\"]",
+			"features[\"pos\"]",
+			"features[\"lemma\"]",
+			"feature[\"lemma\"]",
+			"feature[\"word\"]",
+			"features[\"word\"]",
+			"'drugtype'",
+			"'biotag'",
+			"feature[\"pos\"]",
+			"feature[\"lemma\"]",
+			"feature[\"word\"]",
+			"beforefeature[\"word\"]",
+			"beforefeature[\"lemma\"]",
+			"beforefeature[\"pos\"]",
+			"wordfeatures[\"pos\"]",
+			"wordfeatures[\"lemma\"]",
+			"wordfeatures[\"word\"]",
+			"]",
+			"[",
+			"\"",
+			"",
+			" "
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "MVA - thyroid0387-planning",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1863,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1332,
+								1332
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 540.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/home/pau/Projectes/mvaproject/dataset/thyroid0387.names",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2567,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								241,
+								241
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "project.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 148.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

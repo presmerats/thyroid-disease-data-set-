@@ -118,3 +118,80 @@ preprocessing_old <- function(data){
   return(data_in)  
 }
 
+
+target.extraction <- function(data.select, selection){
+  
+  levels.original <- levels(data.select$class)
+  levels.add <- c(levels.original, 
+                  "hyperthyroid","hypothyroid","binding",
+                  "concurrent_i","replacement_t","antithyroid_t",
+                  "discordant","other","positive")
+  levels(data.select) <- levels.add
+  
+  summary(data.select$class)
+  
+  # 7-class target
+  class7 <- data.select$class
+  levels(class7) <- levels.add
+  # 4-class target
+  class4 <- data.select$class
+  levels(class4) <- levels.add
+  # 2-class target
+  class2 <- data.select$class
+  levels(class2) <- levels.add
+  
+  for (i in 1:length(class7)){
+    if (class7[i] %in% c("A","B","C","D")){
+      class7[i] <- "hyperthyroid"  
+    } else if (class7[i] %in% c("E","F","G","H")){
+      class7[i] <- "hypothyroid"  
+    }  else if (class7[i] %in% c("I","J")){
+      class7[i] <- "binding"  
+    } else if (class7[i] %in% c("K")){
+      class7[i] <- "concurrent_i"
+    } else if (class7[i] %in% c("L","M","N")){
+      class7[i] <- "replacement_t"
+    } else if (class7[i] %in% c("O","P","Q")){
+      class7[i] <- "antithyroid_t"
+    } else if (class7[i] %in% c("R","S","T")){
+      class7[i] <- "discordant"
+    } else if (!(class7[i] %in%  c("-")) ) {
+      class7[i] <- "other"  
+    }
+    
+    if (class4[i] %in% c("A","B","C","D")){
+      class4[i] <- "hyperthyroid"  
+    } else if (class4[i] %in% c("E","F","G","H")){
+      class4[i] <- "hypothyroid"  
+    } else if (!(class4[i] %in%  c("-")) ){
+      class4[i] <- "other"  
+    }
+    
+    if (!(class2[i] %in%  c("-"))){
+      class2[i] <- "positive"
+    }
+  }
+  
+  if (selection == 7){
+    data.select$class <- class7
+    levels2 <- levels(class7)
+    levels(data.select$class) <- levels2
+  } else if (selection == 4){
+    data.select$class <- class4
+    levels2 <- levels(class4)
+    levels(data.select$class) <- levels2
+  } else if (selection == 2){
+    data.select$class <- class2
+    levels2 <- levels(class2)
+    levels(data.select$class) <- levels2
+  } else {
+    # by default 4 classes
+    data.select$class <- class4
+    levels2 <- levels(class4)
+    levels(data.select$class) <- levels2
+  }
+  
+  data.select$class <-  droplevels(data.select$class)
+  return(data.select)
+  
+}

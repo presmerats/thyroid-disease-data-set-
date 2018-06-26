@@ -14,7 +14,7 @@ source("outliers.R")
 source("PCA.R")
 source("PCA_rotation.R")
 
-data <- read.table("../thyroid0387.txt", header = FALSE, sep = ",")
+data <- read.table("../dataset/thyroid0387.txt", header = FALSE, sep = ",")
 
 # Preprocessing ---------------------------------------------
 data_in <- preprocessing(data)
@@ -64,6 +64,17 @@ outliers.data <- outliers(data.mice)[[1]]
 weights <- outliers(data.mice)[[2]]
 
 
+# Target variables preparation ----------------------------------------
+# Transform into 7 classes, 4 classes and 2 classes problem
+source("preprocessing.R")
+data.7.classes <- target.extraction(data.select,selection=7)
+summary(data.7.classes$class)
+data.4.classes <- target.extraction(data.select,selection=4)
+summary(data.4.classes$class)
+data.2.classes <- target.extraction(data.select,selection=2)
+summary(data.2.classes$class)
+summary(data.select$class)
+
 
 # Feature Selection ----------------------------------------------------------------------------------
 set.seed(7)
@@ -88,11 +99,14 @@ colnames(data.select) <- colnames
 
 
 # PCA -------------------------------------------------------------------------
+
 pca <- pca.func(data.select,weights)
 source("PCA_rotation.R")
 par(mfrow=c(1,1))
 pca.rt <- pca.rotation(pca, data.select)
 varimax(pca$var$cor[,1:7])$loadings
+
+
 
 
 
@@ -126,10 +140,11 @@ grouping <- function(doc) {
 
 data.mice$class <- as.factor(sapply(data.mice$class,grouping))
 
-# # split into training data set and test data set
-# N <- nrow(data.mice)
-# learn <- sample(1:N, round(2/3*N))
-# n <- as.integer(summary(data.mice[learn,]$class))
+# split into training data set and test data set
+set.seed(19)
+N <- nrow(data.mice)
+learn <- sample(1:N, round(2/3*N))
+n <- as.integer(summary(data.mice[learn,]$class))
 
 # apply Random Forest
 library(randomForest)
