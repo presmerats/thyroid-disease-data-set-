@@ -73,22 +73,25 @@ weights <- outliers(data.mice)[[2]]
 # Target variables preparation ----------------------------------------
 # Transform into 7 classes, 4 classes and 2 classes problem
 source("preprocessing.R")
-data.7.classes <- target.extraction(data.select,selection=7)
+data.7.classes <- target.extraction(data.mice,selection=7)
 summary(data.7.classes$class)
-data.4.classes <- target.extraction(data.select,selection=4)
+data.4.classes <- target.extraction(data.mice,selection=4)
 summary(data.4.classes$class)
-data.2.classes <- target.extraction(data.select,selection=2)
+data.2.classes <- target.extraction(data.mice,selection=2)
 summary(data.2.classes$class)
 summary(data.select$class)
 
 
 # PCA -------------------------------------------------------------------------
 
-pca <- pca.func(data.select,weights)
-source("PCA_rotation.R")
-par(mfrow=c(1,1))
-pca.rt <- pca.rotation(pca, data.select)
-varimax(pca$var$cor[,1:7])$loadings
+source("PCA.R")
+pca <- pca.func(data.mice,weights)
+pca7 <- pca.func(data.7.classes, weights)
+pca4 <- pca.func(data.4.classes, weights)
+pca2 <- pca.func(data.2.classes, weights)
+
+data.pca <- pca.analysis(pca4, data.mice, weights)
+
 
 
 

@@ -36,26 +36,57 @@ preprocessing
 
 
 
-		visualization
-			PCA?
-				with all vars
-				+ feature selection
-				+ comparison with RF feature selection
-->			rotation
+	unsupervised analysis 
+		PCA?
+			ok-with all vars
+				-> preprocessing/missing/outliers/errors/binarization
+			ok- feature selection
+				ok-compute the contribution to the total inertia of each var
+				ok-select PC's
+					-> 17 by 90%
+					-> 7 by last elbow: we choose this one
+				ok-well represented vars
+				ok-well represented modalities of the target
+				-biplot? makes sense?
 
+			ok- save PC's to df for later clustering
+
+->		rotation
 
 
 ->		clustering
-			Hierarchical + Kmeans
+			Hierarchical + Kmeans (consolidation)
+
+		visualization
+			PCA, 
+			PCA rot
+			hierarchicacl clustering
 
 		interpreation
-			profiling? -> catdes
+			- PCA conclusions 
+					var contribs : comparison with RF feature selection
+						expectations:
+							-the more important vars for prediction 
+								-well represented in the first fact plane
+								-that contributes the most to the total intertia in the first fact plane
+							-well represented classes(modalities of target) -> will be better predicted
+							-
+					correlated vars
+					correlated with target
+					biplot?
+			- profiling? -> catdes
 
+			- for prediction
+				decision trees: 
+					needs balanced classes
+					needs few important vars, not all
+				random forest
+					better if all vars are important
+					does not need balanced classes
 
 
 	ok-feature selection
 ->	- verify the contribution with PCA?
-
 
 
 		prediction model
@@ -64,7 +95,7 @@ preprocessing
 				CART intended for balanced classes in the training data
 			random forest
 			validation protocol OOB
-			harmonic measure
+			harmonic measure -> macro-F measure
 			compare dec. vs rf
 
 
