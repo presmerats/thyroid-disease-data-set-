@@ -84,11 +84,14 @@ summary(data.2.classes$class)
 
 # PCA -------------------------------------------------------------------------
 
-pca <- pca.func(data.select,weights)
-source("PCA_rotation.R")
-par(mfrow=c(1,1))
-pca.rt <- pca.rotation(pca, data.select)
-varimax(pca$var$cor[,1:7])$loadings
+source("PCA.R")
+pca <- pca.func(data.mice,weights)
+pca7 <- pca.func(data.7.classes, weights)
+pca4 <- pca.func(data.4.classes, weights)
+pca2 <- pca.func(data.2.classes, weights)
+
+data.pca <- pca.analysis(pca4, data.mice, weights)
+
 
 
 
