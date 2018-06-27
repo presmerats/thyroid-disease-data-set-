@@ -13,64 +13,30 @@ source("errors.R")
 source("outliers.R")
 source("PCA.R")
 source("PCA_rotation.R")
+source("clustering.R")
 
 data <- read.table("../dataset/thyroid0387.txt", header = FALSE, sep = ",")
 
-# Preprocessing ---------------------------------------------
+# Preprocessing -------------------------------------------------
 data_in <- preprocessing(data)
 
 
-# MIssing values------------------------------------------------------------------------------------------
-
-# # option 1) removing TBG-----------
-# data.mice <- remove.and.impute(data_in)
-# # PCA for comparison
-# library(FactoMineR)
-# summary(data.mice)
-# my.pca1 <- PCA(data.mice, quali.sup = c(2,22,23))
-# summary(data.mice$class)
-# plot(my.pca1$ind$coord[,1],my.pca1$ind$coord[,2], col=as.numeric(data.mice$class))
-
-# option 2) doing MICE-------
-data.mice2 <- impute.all(data_in)
-# PCA for comparison
-library(FactoMineR)
-my.pca2 <- PCA(data.mice2, quali.sup = c(2,22,24))
-summary(data.mice2$class)
-plot(my.pca2$ind$coord[,1],my.pca2$ind$coord[,2], col=as.numeric(data.mice2$class))
-
-# # option 3) doing MICE for conditions, 24 for healthy-----
-# data.mice3 <- impute.condition(data_in)
-# # PCA for comparison
-# library(FactoMineR)
-# my.pca3 <- PCA(data.mice3, quali.sup = c(2,22,24))
-# summary(data.mice3$class)
-# plot(my.pca3$ind$coord[,1],my.pca3$ind$coord[,2], col=as.numeric(data.mice$class))
-# 
-# # option 4) doing MICE for conditions, 24 for healthy-----
-# data.mice4 <- impute.condition2(data_in)
-# # PCA for comparison
-# library(FactoMineR)
-# my.pca4 <- PCA(data.mice4, quali.sup = c(2,22,24))
-# summary(data.mice4$class)
-# plot(my.pca4$ind$coord[,1],my.pca$ind$coord[,2], col=as.numeric(data.mice$class))
-
+# MIssing values-------------------------------------------------
+#data.mice <- missing.analysis(data_in)
+data.mice <- missing.analysis.short(data_in)
 
 # now binarize sex after completing missing data-----------------
-data.mice <- sex.binarization(data.mice2)
+data.mice <- sex.binarization(data.mice)
 
-# errors -------------------------------------------------
+# errors --------------------------------------------------------
 data.mice <- errors(data.mice)
 
-# outliers ----------------------------------------------------------------
+# outliers ------------------------------------------------------
 outliers.data <- outliers(data.mice)[[1]]
 weights <- outliers(data.mice)[[2]]
 
 
-
-
-
-# Target variables preparation ----------------------------------------
+# Target variables preparation ----------------------------------
 # Transform into 7 classes, 4 classes and 2 classes problem
 source("preprocessing.R")
 data.7.classes <- target.extraction(data.mice,selection=7)
@@ -82,8 +48,8 @@ summary(data.2.classes$class)
 summary(data.select$class)
 
 
-# PCA -------------------------------------------------------------------------
 
+# PCA -----------------------------------------------------------
 source("PCA.R")
 pca <- pca.func(data.mice,weights)
 pca7 <- pca.func(data.7.classes, weights)
@@ -93,20 +59,39 @@ pca2 <- pca.func(data.2.classes, weights)
 data.pca <- pca.analysis(pca4, data.mice, weights)
 
 
+#  Clustering ------------------------------------------------
+source("clustering.R")
+clustering.analysis(pca7,data.pca,weights)
 
 
-# Hierarchical Clustering ---------------------------------------------
+# split into training data set and test data set
+set.seed(19)
+N <- nrow(data.mice)
+learn <- sample(1:N, round(2/3*N))
+n <- as.integer(summary(data.mice[learn,]$class))
+
+
+# PCA -----------------------------------------------------------
+source("PCA.R")
+pca <- pca.func(data.mice[learn,],weights[learn])
+pca4 <- pca.func(data.4.classes[learn,], weights[learn])
+data.pca <- pca.analysis(pca, data.mice, weights)
+#  Clustering ------------------------------------------------
+source("clustering.R")
+clustering.analysis(pca4,data.pca,weights)
+# PCA -----------------------------------------------------------
+source("PCA.R")
+pca <- pca.func(data.mice[-learn,],weights[-learn])
+pca4 <- pca.func(data.4.classes[-learn,], weights[-learn])
+data.pca <- pca.analysis(pca, data.mice, weights)
+#  Clustering ------------------------------------------------
+source("clustering.R")
+clustering.analysis(pca4,data.pca,weights)
 
 
 
 
-# interpretation
-
-
-
-
-
-# Feature Selection ----------------------------------------------------------------------------------
+# Feature Selection ------------------------------------------
 set.seed(7)
 library(mlbench)
 library(caret)
